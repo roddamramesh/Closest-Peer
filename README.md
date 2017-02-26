@@ -2,8 +2,7 @@
 
 https://github.com/roddamramesh/Closest-Peer/blob/master/Question.pdf
 
-Write a function to find closest peer node as described in following table.
-Feel free to define whatever class, function and/or parameters as needed.
+Write a function to find closest peer node.
 
 The idea behind this program is to make use of Breadth-first search and find the closest node.
 
