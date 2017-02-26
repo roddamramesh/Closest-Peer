@@ -42,7 +42,7 @@ public class FindingPeerNode {
 
     }
 
-    public Node closestPeer(Node rootNode, String sibling) {
+    public Node closestPeer(Node rootNode, String userInput) {
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(rootNode);
         queue.add(null);
@@ -57,7 +57,7 @@ public class FindingPeerNode {
                 queue.add(null);
                 continue;
             }
-            if (currentNode.data.equals(sibling)) {
+            if (currentNode.data.equals(userInput)) {
                 if (queue.isEmpty()) {
                     return null;
                 } else {
