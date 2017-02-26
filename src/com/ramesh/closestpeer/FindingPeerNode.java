@@ -36,8 +36,6 @@ public class FindingPeerNode {
 
     }
 
-
-
     public Node closestPeer(Node rootNode, String sibling) {
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(rootNode);
