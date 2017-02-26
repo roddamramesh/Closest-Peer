@@ -59,7 +59,7 @@ public class FindingPeerNode {
                 }
             }
 
-            /*Enqueue child  */
+            /*Enqueue child and sibling  */
             if (currentNode.childPointer != null) {
                 queue.add(currentNode.childPointer);
                 Node child = currentNode.childPointer;
