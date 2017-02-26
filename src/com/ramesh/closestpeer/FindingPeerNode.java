@@ -11,11 +11,13 @@ public class FindingPeerNode {
 
     public static void main(String args[]) {
 
+        boolean repeat= true;
+        String decision="YES";
+        Node closestPeerNode;
+
         FindingPeerNode findingPeerNode = new FindingPeerNode();
         Node rootNode = findingPeerNode.buildAndMapAllNodes();
         Scanner scanner = new Scanner(System.in);
-        boolean repeat= true;
-        String decision="YES";
 
         while(repeat){
             switch(decision.toUpperCase()){
@@ -23,13 +25,17 @@ public class FindingPeerNode {
                     repeat=true;
                     System.out.print("Please Enter the Closest Peer you want to find for: ");
                     String userInput=scanner.next();
-                    Node closestPeerNode = findingPeerNode.closestPeer(rootNode, userInput);
+                    closestPeerNode = findingPeerNode.closestPeer(rootNode, userInput);
                     findingPeerNode.printClosestPeer(closestPeerNode,userInput);
                     System.out.print("\nDo You want to find another closest peer (Yes/No): ");
                     decision=scanner.next();
                     break;
                 case "NO":
                     repeat=false;
+                    break;
+                default:
+                    repeat=false;
+                    System.out.print("Invalid data entered");
                     break;
             }
         }
@@ -67,6 +73,7 @@ public class FindingPeerNode {
                     queue.add(child.siblingPointer);
                     child = child.siblingPointer;
                 }
+
             }
         }
         return null;
