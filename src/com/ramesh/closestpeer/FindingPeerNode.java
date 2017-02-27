@@ -32,10 +32,12 @@ public class FindingPeerNode {
                     break;
                 case "NO":
                     repeat=false;
+                    scanner.close();
                     break;
                 default:
                     repeat=false;
                     System.out.print("Invalid data entered");
+                    scanner.close();
                     break;
             }
         }
